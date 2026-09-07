@@ -33,6 +33,7 @@
     .person .portrait{background:#d8ddd2}.person .portrait img{object-fit:contain!important;object-position:center!important;background:#d8ddd2}
     .person .portrait{height:200px;background:#d8ddd2}.person .portrait img{object-fit:cover!important;background:#d8ddd2}.person:nth-child(1) .portrait img{object-position:50% 30%!important}.person:nth-child(2) .portrait img{object-position:25% 24%!important}.person:nth-child(3) .portrait img{object-position:50% 25%!important}@media(max-width:760px){.person .portrait{height:300px}}
     .person:nth-child(1) .portrait img{object-position:50% 55%!important;transform:scale(1.12)}
+    .footer-brand{display:flex;flex-direction:column;align-items:center;gap:10px;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,.16)}.footer-logo{width:150px;height:120px;object-fit:contain;object-position:center;filter:grayscale(1) invert(1) contrast(1.35);mix-blend-mode:screen}.footer-brand p{margin:0;color:#c7d0c0;font:400 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-align:center}.brand{display:flex;align-items:center}.header-wordmark{display:block;width:210px;height:auto}@media(max-width:760px){.header-wordmark{width:158px}}
   </style>
 </head>
 <body>
@@ -103,6 +104,9 @@
     lakehouseCase.id = 'lakehouse-residence';
     lakehouseCase.innerHTML = `<div class="wrap"><div class="case-label"><div><div class="eyebrow">Project deep-dive / 06</div><h2>Lakehouse Residence</h2></div><div class="case-meta">Residential Design<br>Lakefront Living</div></div><div class="case-intro"><div class="case-meta">A study in light,<br>volume, and connection.</div><p>Designed for a compact residential footprint, this two-story lake house explores transparency, vertical volume, and seamless indoor-outdoor living. The architecture is anchored by a double-height living room with expansive glass walls that flood the interior with natural light and frame panoramic views of the water and surrounding forest. Layered exterior elements—including a screened porch, expansive stone patio, and integrated outdoor shower—soften the threshold between inside and out, creating natural transitions tailored for relaxation and year-round connection to nature.</p></div><div class="yoga-gallery"><figure><img src="lakehouse-kitchen.jpg" alt="Lakehouse Residence kitchen"><figcaption>Kitchen</figcaption></figure><figure><img src="lakehouse-living-room.png" alt="Lakehouse Residence living room"><figcaption>Double-height living room</figcaption></figure><figure><img src="lakehouse-plans.jpg" alt="Lakehouse Residence floor plans"><figcaption>Floor plans</figcaption></figure><figure><img src="lakehouse-primary-bath.png" alt="Lakehouse Residence primary bath"><figcaption>Primary bath</figcaption></figure><figure class="wide"><img src="lakehouse-primary-bedroom.png" alt="Lakehouse Residence primary bedroom"><figcaption>Primary bedroom</figcaption></figure></div></div>`;
     document.querySelector('#yoga-house').after(lakehouseCase);
+    document.querySelector('footer .foot').insertAdjacentHTML('beforebegin', '<div class="wrap footer-brand"><img class="footer-logo" src="kbh-logo.png" alt="KBH Design logo"><p>This website is for educational purposes only.</p></div>');
+    const headerBrand = document.querySelector('nav .brand');
+    headerBrand.innerHTML = '<img class="header-wordmark" src="kbh-logo-wordmark.png" alt="KBH Design Collective — Landscape Architecture and Interior Design">';
   </script>
 </body>
 </html>
